@@ -1,5 +1,9 @@
 package com.skillforge.service;
 
-public interface UserService {
+import com.skillforge.dto.RegisterRequestDTO;
+import com.skillforge.dto.UserResponseDTO;
 
+public interface UserService {
+	UserResponseDTO registerUser(RegisterRequestDTO registerRequestDTO);
+	
 }
