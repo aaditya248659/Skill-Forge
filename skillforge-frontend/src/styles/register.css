@@ -1,0 +1,163 @@
+/* ==========================================================
+                            REGISTER
+========================================================== */
+
+
+/* ==========================================================
+   REGISTER PAGE
+========================================================== */
+
+.auth-page{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff 0%,
+            #f8fafc 50%,
+            #eef2ff 100%
+        );
+}
+
+/* ==========================================================
+   REGISTER CARD
+========================================================== */
+
+.auth-card{
+    width:100%;
+    max-width:480px;
+    background:#ffffff;
+    border:1px solid var(--border);
+    border-radius:28px;
+    padding:42px;
+    box-shadow:var(--shadow-lg);
+    animation:fadeIn .35s ease;
+}
+
+/* ==========================================================
+   BRAND
+========================================================== */
+
+.auth-brand{
+    font-size:2.5rem;
+    font-weight:800;
+    margin-bottom:10px;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+/* ==========================================================
+   HEADING
+========================================================== */
+
+.auth-card h2{
+    margin-bottom:10px;
+    color:var(--text-primary);
+}
+
+.auth-card p{
+    color:var(--text-secondary);
+}
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.auth-card form{
+    margin-top:24px;
+}
+
+.auth-card .form-label{
+    font-weight:600;
+    color:var(--text-primary);
+    margin-bottom:8px;
+}
+
+.auth-card .form-control,
+.auth-card .form-select{
+    height:54px;
+    border-radius:14px;
+    border:1px solid var(--border);
+    transition:var(--transition);
+}
+
+.auth-card .form-control:focus,
+.auth-card .form-select:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.auth-card .btn{
+    height:54px;
+    border-radius:14px;
+    margin-top:12px;
+    font-size:1rem;
+    font-weight:700;
+}
+
+/* ==========================================================
+   ALERT
+========================================================== */
+
+.auth-card .alert{
+    border-radius:14px;
+    margin-top:16px;
+    margin-bottom:18px;
+}
+
+/* ==========================================================
+   LOGIN LINK
+========================================================== */
+
+.auth-link{
+    color:var(--primary);
+    font-weight:700;
+    transition:var(--transition);
+}
+
+.auth-link:hover{
+    color:var(--secondary);
+    text-decoration:underline;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+    .auth-card{
+        padding:30px;
+    }
+    .auth-brand{
+        font-size:2.1rem;
+    }
+}
+
+@media(max-width:576px){
+    .auth-page{
+        padding:20px 16px;
+    }
+    .auth-card{
+        padding:24px;
+        border-radius:22px;
+    }
+    .auth-brand{
+        font-size:1.9rem;
+    }
+    .auth-card .btn{
+        height:50px;
+}
+}

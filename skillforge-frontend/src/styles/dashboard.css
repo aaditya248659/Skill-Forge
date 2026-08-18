@@ -1,0 +1,300 @@
+/* ==========================================================
+                            DASHBOARD
+========================================================== */
+
+/* ==========================================================
+   DASHBOARD PAGE
+========================================================== */
+
+.dashboard-page{
+    display:flex;
+    flex-direction:column;
+    gap:36px;
+    animation:fadeIn .35s ease;
+}
+
+/* ==========================================================
+   WELCOME SECTION
+========================================================== */
+
+.dashboard-welcome{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    padding:42px;
+    border-radius:var(--radius-xl);
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:#ffffff;
+    box-shadow:var(--shadow-lg);
+}
+
+.dashboard-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    padding:8px 16px;
+    border-radius:999px;
+    background:rgba(255,255,255,.18);
+    color:#ffffff;
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:18px;
+}
+
+.dashboard-welcome h1{
+    color:#ffffff;
+    font-size:2.8rem;
+    margin-bottom:16px;
+}
+
+.dashboard-welcome p{
+    color:rgba(255,255,255,.92);
+    max-width:650px;
+    margin:0;
+    line-height:1.9;
+}
+
+.dashboard-profile-btn{
+    flex-shrink:0;
+    min-width:210px;
+}
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+.dashboard-section{
+    display:flex;
+    flex-direction:column;
+}
+
+.dashboard-section-header{
+    margin-bottom:28px;
+}
+
+.dashboard-section-header h2{
+    margin-bottom:8px;
+}
+
+.dashboard-section-header p{
+    margin:0;
+    color:var(--text-secondary);
+}
+
+/* ==========================================================
+   MODULE LINK
+========================================================== */
+
+.dashboard-module-link{
+    display:block;
+    height:100%;
+    color:inherit;
+}
+
+/* ==========================================================
+   MODULE CARD
+========================================================== */
+
+.dashboard-module-card{
+    height:100%;
+    display:flex;
+    gap:18px;
+    padding:26px;
+    background:#ffffff;
+    border:1px solid var(--border);
+    border-radius:22px;
+    box-shadow:var(--shadow-sm);
+    transition:var(--transition);
+}
+
+.dashboard-module-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--primary);
+    box-shadow:var(--shadow-lg);
+}
+
+/* ==========================================================
+   MODULE ICON
+========================================================== */
+
+.dashboard-module-icon{
+    width:72px;
+    height:72px;
+    flex-shrink:0;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:#ffffff;
+    font-weight:800;
+    font-size:1.15rem;
+}
+
+/* ==========================================================
+   MODULE CONTENT
+========================================================== */
+
+.dashboard-module-content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.dashboard-module-content h3{
+    margin-bottom:10px;
+}
+
+.dashboard-module-content p{
+    flex:1;
+    color:var(--text-secondary);
+    margin-bottom:18px;
+}
+
+.dashboard-card-action{
+    color:var(--primary);
+    font-weight:700;
+    transition:var(--transition);
+}
+
+.dashboard-module-card:hover .dashboard-card-action{
+    letter-spacing:.4px;
+}
+
+/* ==========================================================
+   AI SECTION
+========================================================== */
+
+.dashboard-ai-banner{
+    display:flex;
+    align-items:center;
+    gap:26px;
+    padding:36px;
+    border-radius:24px;
+    background:#0f172a;
+    color:#ffffff;
+    box-shadow:var(--shadow-lg);
+}
+
+.dashboard-ai-icon{
+    width:82px;
+    height:82px;
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:#ffffff;
+    font-size:2rem;
+    font-weight:800;
+    flex-shrink:0;
+}
+
+.dashboard-ai-content{
+    flex:1;
+}
+
+.dashboard-ai-content span{
+    display:block;
+    margin-bottom:10px;
+    color:#93c5fd;
+    font-size:.82rem;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.dashboard-ai-content h2{
+    color:#ffffff;
+    margin-bottom:12px;
+}
+
+.dashboard-ai-content p{
+    color:#cbd5e1;
+    margin:0;
+}
+
+.dashboard-ai-btn{
+    flex-shrink:0;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 26px;
+    border-radius:14px;
+    background:#ffffff;
+    color:var(--primary);
+    font-weight:700;
+    transition:var(--transition);
+}
+
+.dashboard-ai-btn:hover{
+    transform:translateY(-3px);
+    color:var(--primary);
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:992px){
+    .dashboard-welcome{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .dashboard-profile-btn{
+        width:100%;
+    }
+    .dashboard-ai-banner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .dashboard-ai-btn{
+        width:100%;
+    }
+}
+
+@media(max-width:768px){
+    .dashboard-page{
+        gap:28px;
+    }
+    .dashboard-welcome{
+        padding:28px;
+    }
+    .dashboard-welcome h1{
+        font-size:2.1rem;
+    }
+    .dashboard-module-card{
+        flex-direction:column;
+    }
+    .dashboard-module-icon{
+        width:64px;
+        height:64px;
+    }
+    .dashboard-ai-banner{
+        padding:28px;
+    }
+}
+
+@media(max-width:576px){
+    .dashboard-welcome{
+        padding:22px;
+    }
+    .dashboard-welcome h1{
+        font-size:1.8rem;
+    }
+    .dashboard-ai-banner{
+        padding:22px;
+    }
+}

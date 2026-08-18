@@ -1,0 +1,40 @@
+# Eclipse / Spring Tools workspace
+.metadata/
+.metadata_backup/
+
+# VS Code
+.vscode/
+
+# Java / Spring Boot
+skillforge-backend/target/
+skillforge-backend/.classpath
+skillforge-backend/.project
+skillforge-backend/.settings/
+
+# Node / React
+skillforge-frontend/node_modules/
+skillforge-frontend/dist/
+
+# Environment / secrets
+.env
+.env.*
+*.env
+application-local.properties
+application-secret.properties
+**/application.properties
+**/Api Key.txt
+**/.factorypath
+
+# Logs
+*.log
+logs/
+
+# Uploaded user files
+skillforge-backend/uploads/
+
+# Temporary / archive files
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db

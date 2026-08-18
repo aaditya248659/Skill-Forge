@@ -1,0 +1,512 @@
+/* ==========================================================
+                        PROJECTS PAGE
+========================================================== */
+
+.projects-page{
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+    max-width:1400px;
+    margin:0 auto;
+    animation:fadeIn .35s ease;
+}
+
+/* ==========================================================
+                        PAGE HEADER
+========================================================== */
+
+.projects-page .page-header{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:14px;
+    margin-bottom:10px;
+}
+
+.projects-page .dashboard-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:8px 18px;
+    border-radius:999px;
+    background:rgba(56,189,248,.12);
+    color:#38bdf8;
+    font-size:.75rem;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.projects-page .page-header h1{
+    margin:0;
+    font-size:3.4rem;
+    font-weight:800;
+    color:#1d4ed8;
+}
+
+.projects-page .page-header p{
+    max-width:760px;
+    margin:0;
+    color:var(--text-secondary);
+    font-size:1.05rem;
+    line-height:1.8;
+}
+
+/* ==========================================================
+                        FORM CARD
+========================================================== */
+
+.project-form-card{
+    background:#ffffff;
+    border:1px solid var(--border);
+    border-radius:24px;
+    padding:30px;
+    box-shadow:var(--shadow-sm);
+    transition:var(--transition);
+    position:relative;
+    overflow:hidden;
+}
+
+.project-form-card:hover{
+    box-shadow:var(--shadow-md);
+}
+
+.project-form-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:5px;
+    height:100%;
+    background:linear-gradient(
+        var(--primary),
+        var(--secondary)
+    );
+}
+
+/* ==========================================================
+                    CARD HEADER
+========================================================== */
+
+.project-card-header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding-bottom:20px;
+    margin-bottom:28px;
+    border-bottom:1px solid var(--border);
+}
+
+.project-card-icon{
+    width:56px;
+    height:56px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:#ffffff;
+    font-size:1rem;
+    font-weight:700;
+    flex-shrink:0;
+    box-shadow:0 12px 28px rgba(37,99,235,.18);
+}
+
+.project-card-header h2{
+    margin:0 0 6px;
+    font-size:1.75rem;
+    font-weight:700;
+    color:var(--text-primary);
+}
+
+.project-card-header p{
+    margin:0;
+    color:var(--text-secondary);
+}
+
+/* ==========================================================
+                        FORM
+========================================================== */
+
+.project-form-card .form-label{
+    font-size:.92rem;
+    font-weight:600;
+    color:var(--text-primary);
+    margin-bottom:8px;
+}
+
+.project-form-card .form-control,
+.project-form-card .form-select{
+    min-height:54px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:14px 16px;
+    background:#ffffff;
+    transition:var(--transition);
+}
+
+.project-form-card textarea.form-control{
+    min-height:140px;
+    resize:vertical;
+}
+
+.project-form-card .form-control:focus,
+.project-form-card .form-select:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+.form-helper-text{
+    margin-top:8px;
+    font-size:.82rem;
+    color:var(--text-muted);
+}
+
+/* ==========================================================
+                    FORM ACTIONS
+========================================================== */
+
+.project-form-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:16px;
+    margin-top:32px;
+    padding-top:24px;
+    border-top:1px solid var(--border);
+    flex-wrap:wrap;
+}
+
+.project-form-actions .btn{
+    min-width:180px;
+}
+
+/* ==========================================================
+                    MESSAGE
+========================================================== */
+
+.project-message{
+    border:none;
+    border-radius:16px;
+    padding:16px 20px;
+    font-weight:600;
+    box-shadow:var(--shadow-sm);
+}
+
+/* ==========================================================
+                    PROJECT LIST CARD
+========================================================== */
+
+.projects-list-card{
+    background:#ffffff;
+    border:1px solid var(--border);
+    border-radius:24px;
+    padding:30px;
+    box-shadow:var(--shadow-sm);
+}
+
+.projects-list-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding-bottom:24px;
+    margin-bottom:24px;
+    border-bottom:1px solid var(--border);
+    flex-wrap:wrap;
+}
+
+.projects-list-header h2{
+    margin:0 0 6px;
+    font-size:2rem;
+    font-weight:700;
+    color:var(--text-primary);
+}
+
+.projects-list-header p{
+    margin:0;
+    color:var(--text-secondary);
+}
+
+.projects-count{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 22px;
+    border-radius:999px;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:#ffffff;
+    font-weight:700;
+    box-shadow:0 10px 25px rgba(37,99,235,.18);
+}
+
+/* ==========================================================
+                    EMPTY STATE
+========================================================== */
+
+.projects-empty-state{
+    padding:70px 30px;
+    text-align:center;
+}
+
+.projects-empty-icon{
+    width:90px;
+    height:90px;
+    margin:0 auto 24px;
+    border-radius:24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:#ffffff;
+    font-size:1.6rem;
+    font-weight:700;
+    box-shadow:0 16px 35px rgba(37,99,235,.20);
+}
+
+.projects-empty-state h3{
+    margin-bottom:12px;
+    font-size:1.8rem;
+    color:var(--text-primary);
+}
+
+.projects-empty-state p{
+    max-width:500px;
+    margin:auto;
+    color:var(--text-secondary);
+    line-height:1.8;
+}
+
+/* ==========================================================
+                        TABLE
+========================================================== */
+
+.project-table{
+    margin:0;
+}
+
+.project-table thead th{
+    background:#f8fafc;
+    border:none;
+    border-bottom:2px solid var(--border);
+    color:var(--text-primary);
+    font-size:.82rem;
+    font-weight:700;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    padding:18px;
+    white-space:nowrap;
+}
+
+.project-table tbody td{
+    padding:20px 18px;
+    vertical-align:middle;
+    border-bottom:1px solid #eef2f7;
+}
+
+.project-table tbody tr{
+    transition:var(--transition);
+}
+
+.project-table tbody tr:hover{
+    background:#f8fbff;
+}
+
+/* ==========================================================
+                    PROJECT CELLS
+========================================================== */
+
+.project-name-cell{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.project-row-icon{
+    width:46px;
+    height:46px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:#ffffff;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+.project-technology{
+    display:inline-flex;
+    align-items:center;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#eff6ff;
+    color:#2563eb;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+.project-description-cell{
+    width:280px;
+    max-width:280px;
+    color:var(--text-secondary);
+    vertical-align:middle;
+}
+
+.project-description-text{
+    line-height:1.6;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:5;
+    overflow:hidden;
+}
+
+.project-links{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.project-link{
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:600;
+}
+
+.project-link:hover{
+    text-decoration:underline;
+}
+
+.project-duration{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    white-space:nowrap;
+    color:var(--text-secondary);
+    font-weight:500;
+}
+
+.project-duration-arrow{
+    color:var(--primary);
+    font-weight:700;
+}
+
+.project-empty-value{
+    color:var(--text-muted);
+}
+
+.project-actions{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    flex-wrap:nowrap;
+    min-width:150px;
+}
+
+.project-actions .btn{
+    min-width:76px;
+}
+
+.project-table thead th:last-child,
+.project-table tbody td:last-child{
+    width:160px;
+    min-width:160px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.add-more-projects{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.add-more-projects-btn{
+    min-width:200px;
+    padding:12px 24px;
+    font-weight:600;
+    border-radius:12px;
+}
+
+/* ==========================================================
+                    RESPONSIVE
+========================================================== */
+
+@media(max-width:992px){
+
+    .project-form-card,
+    .projects-list-card{
+        padding:24px;
+    }
+
+    .projects-list-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .projects-page{
+        gap:24px;
+    }
+
+    .projects-page .page-header h1{
+        font-size:2.6rem;
+    }
+
+    .project-card-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .project-form-actions{
+        flex-direction:column;
+    }
+
+    .project-form-actions .btn{
+        width:100%;
+    }
+
+    .project-actions{
+        justify-content:flex-start;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .project-form-card,
+    .projects-list-card{
+        padding:18px;
+    }
+
+    .projects-page .page-header h1{
+        font-size:2.2rem;
+    }
+
+    .projects-count{
+        width:100%;
+        justify-content:center;
+    }
+
+}
