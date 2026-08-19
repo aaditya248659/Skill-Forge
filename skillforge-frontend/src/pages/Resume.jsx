@@ -51,18 +51,28 @@ function Resume() {
     };
 
     const handleViewResume = async () => {
+        const newWindow = window.open("", "_blank");
+
         try {
+            if (!newWindow) {
+                throw new Error("Please allow pop-ups for SkillForge.");
+            }
+
             const blob = await viewResume();
 
             const fileUrl = window.URL.createObjectURL(blob);
 
-            window.open(fileUrl, "_blank");
+            newWindow.location.href = fileUrl;
 
             setTimeout(() => {
                 window.URL.revokeObjectURL(fileUrl);
             }, 60000);
 
         } catch (err) {
+            if (newWindow) {
+                newWindow.close();
+            }
+
             alert(err.message);
         }
     };
