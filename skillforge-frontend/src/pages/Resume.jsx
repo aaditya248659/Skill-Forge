@@ -53,10 +53,24 @@ function Resume() {
     const handleViewResume = async () => {
         const newWindow = window.open("", "_blank");
 
+        if (!newWindow) {
+            alert("Please allow pop-ups for SkillForge.");
+            return;
+        }
+
         try {
-            if (!newWindow) {
-                throw new Error("Please allow pop-ups for SkillForge.");
-            }
+            newWindow.document.write(`
+                <html>
+                    <head>
+                        <title>SkillForge Resume</title>
+                    </head>
+                    <body style="margin:0;">
+                        <p style="text-align:center;margin-top:20px;">
+                            Loading resume...
+                        </p>
+                    </body>
+                </html>
+            `);
 
             const blob = await viewResume();
 
@@ -69,10 +83,7 @@ function Resume() {
             }, 60000);
 
         } catch (err) {
-            if (newWindow) {
-                newWindow.close();
-            }
-
+            newWindow.close();
             alert(err.message);
         }
     };
