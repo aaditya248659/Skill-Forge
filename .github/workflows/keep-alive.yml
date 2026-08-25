@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Ping Spring Boot Service
         run: |
-          curl -s https://onrender.com
+          curl -s https://skillforge-backend-popd.onrender.com
