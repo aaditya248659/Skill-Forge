@@ -2,8 +2,8 @@ name: Keep SkillForge Render Awake
 
 on:
   schedule:
-    # Runs automatically every 10 minutes
     - cron: '*/10 * * * *'
+  workflow_dispatch:
 
 jobs:
   ping:
@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Ping Spring Boot Service
         run: |
-          curl -s https://skillforge-backend-popd.onrender.com
+          curl -s https://onrender.com
